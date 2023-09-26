@@ -1,0 +1,13 @@
+{
+  "name": "${localWorkspaceFolderBasename}_v2.0.0",
+  "image": "ghcr.io/louisaslett/apts-statml:latest",
+  "forwardPorts": [8787],
+  "portsAttributes": {
+    "8787": {
+      "label": "RStudio",
+      "requireLocalPort": true,
+      "onAutoForward": "ignore"
+    }
+  },
+  "postAttachCommand": "sudo rstudio-server start"
+}
